@@ -19,6 +19,14 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Debug listing + add .nojekyll
+        run: |
+          echo "Root listing:" && ls -la
+          echo "Site listing:" && ls -la site
+          test -f site/index.html || (echo "ERROR: site/index.html missing" && exit 1)
+          # ensure Jekyll doesn't interfere (harmless even if not needed)
+          : > site/.nojekyll
+
       - name: Upload site as artifact
         uses: actions/upload-pages-artifact@v3
         with:
