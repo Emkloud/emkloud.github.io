@@ -1,200 +1,186 @@
 <!doctype html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Emmanuel Olaoye — DevOps/SRE</title>
-    <meta name="description"
-        content="Senior DevOps/SRE specializing in AWS, Kubernetes, Terraform, CI/CD and observability." />
-    <link rel="stylesheet" href="./styles.css" />
-    <style>
-        /* light structure helpers so lists look great without touching your main CSS */
-        .grid {
-            display: grid;
-            gap: 16px;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-        }
-
-        .pill {
-            display: inline-block;
-            padding: 4px 10px;
-            border: 1px solid var(--border);
-            border-radius: 20px;
-            margin: 4px 6px 0 0;
-            background: rgba(255, 255, 255, 0.02);
-        }
-
-        .subtle {
-            color: var(--muted);
-            font-size: 14px;
-        }
-
-        .block {
-            background: var(--card);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 16px;
-        }
-
-        .mt-6 {
-            margin-top: 24px;
-        }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Emmanuel Olaoye — Senior Cloud/DevOps Engineer</title>
+  <meta name="description" content="Senior Cloud/DevOps Engineer specializing in AWS, EKS, Terraform, CI/CD, observability, and secure platform engineering." />
+  <!-- Optional favicon (place at site/assets/favicon.ico) -->
+  <link rel="icon" href="./assets/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="./styles.css" />
 </head>
-
 <body>
-    <main class="container">
-        <header>
-            <h1>Emmanuel Olaoye — Senior Cloud/DevOps Engineer</h1>
-            <p>I build secure, scalable AWS platforms with Kubernetes, Terraform, and CI/CD.</p>
-            <nav>
-                <a href="#projects">Projects</a>
-                <a href="#skills">Skills</a>
-                <a href="./assets/Emmanuel_Olaoye.pdf" target="_blank" rel="noopener">Resume</a>
-            </nav>
-        </header>
+  <!-- Soft gradient background -->
+  <div class="bg-gradient" aria-hidden="true"></div>
 
-        <section id="projects">
-            <h2>Projects</h2>
-            <div class="cards">
-                <article class="card">
-                    <h3>EKS Multi-Cluster GitOps</h3>
-                    <p class="stack">AWS, EKS, ArgoCD, Terraform</p>
-                    <p>99.99% SLA, -40% ops toil via GitOps and autoscaling.</p>
-                </article>
-                <article class="card">
-                    <h3>Serverless Event Pipeline</h3>
-                    <p class="stack">Lambda, EventBridge, SQS</p>
-                    <p>Real-time processing, -35% infra cost.</p>
-                </article>
-                <article class="card">
-                    <h3>PgAnalyze on ECS</h3>
-                    <p class="stack">RDS, ECS, pganalyze</p>
-                    <p>-50% MTTR with proactive DB visibility.</p>
-                </article>
-            </div>
-        </section>
+  <main class="container">
+    <!-- NAV -->
+    <nav class="topnav">
+      <a class="brand" href="#top">EO</a>
+      <div class="navlinks">
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="./assets/Emmanuel_Olaoye.pdf" target="_blank" rel="noopener">Resume</a>
+      </div>
+    </nav>
 
-        <section id="skills" class="mt-6">
-            <h2>Skills</h2>
+    <!-- HERO / ABOUT -->
+    <header id="top" class="hero card">
+      <img class="profile-photo" src="./assets/profile.png" alt="Emmanuel Olaoye" onerror="this.style.display='none'">
+      <div class="hero-copy">
+        <h1>Emmanuel Olaoye</h1>
+        <p class="lead">
+          Senior Cloud/DevOps Engineer focused on <strong>AWS</strong>, <strong>Kubernetes (EKS)</strong>,
+          <strong>Terraform</strong>, and <strong>CI/CD</strong>. I design secure, scalable, cost-efficient
+          platforms, drive GitOps automation, and turn observability into rapid feedback for engineering teams.
+        </p>
+        <div class="actions">
+          <a class="btn primary" href="./assets/Emmanuel_Olaoye.pdf" target="_blank" rel="noopener">Download Resume</a>
+          <a class="btn" href="#projects">View Projects</a>
+          <a class="btn" href="#skills">Explore Skills</a>
+        </div>
+        <div class="socials">
+          <a class="link" href="https://github.com/Emkloud" target="_blank" rel="noopener" aria-label="GitHub">GitHub</a>
+          <span class="dot">•</span>
+          <a class="link" href="https://www.linkedin.com/in/" target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn</a>
+          <span class="dot">•</span>
+          <a class="link" href="mailto:your.email@example.com" aria-label="Email">Email</a>
+        </div>
+      </div>
+    </header>
 
-            <!-- Core capabilities at a glance -->
-            <div class="block">
-                <strong>Core Capabilities:</strong>
-                <span class="pill">Platform Engineering</span>
-                <span class="pill">SRE & Reliability</span>
-                <span class="pill">Kubernetes on AWS (EKS)</span>
-                <span class="pill">Infrastructure as Code</span>
-                <span class="pill">Secure-by-Default Architecture</span>
-                <span class="pill">Observability & Incident Response</span>
-                <span class="pill">Cost Optimization</span>
-                <span class="pill">GitOps & Automation</span>
-            </div>
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <h2>Projects</h2>
+      <div class="grid">
+        <article class="project card">
+          <h3>EKS Multi-Cluster GitOps</h3>
+          <p class="stack">AWS · EKS · Argo CD · Terraform</p>
+          <p>Cross-account, multi-region EKS with GitOps. Achieved <strong>99.99% SLA</strong> and reduced ops toil by <strong>40%</strong> using autoscaling, PDBs, and policy-as-code.</p>
+        </article>
 
-            <!-- Categorized stacks -->
-            <div class="grid mt-6">
+        <article class="project card">
+          <h3>Serverless Event Pipeline</h3>
+          <p class="stack">Lambda · EventBridge · SQS</p>
+          <p>Event-driven ingestion for real-time processing and retries. Cut infrastructure cost by <strong>35%</strong> and accelerated onboarding of new data sources.</p>
+        </article>
 
-                <div class="block">
-                    <h3>AWS (Primary Cloud)</h3>
-                    <p class="subtle">Breadth across networking, compute, storage, and security.</p>
-                    <ul>
-                        <li>VPC, Subnets, IGW/NAT, Route Tables, VPC Peering, PrivateLink</li>
-                        <li>EKS, ECS/Fargate, EC2, ASG, ALB/NLB, ECR</li>
-                        <li>RDS (Postgres/MySQL), DynamoDB, ElastiCache (Redis)</li>
-                        <li>S3, CloudFront, KMS, Parameter Store/Secrets Manager</li>
-                        <li>CloudWatch (Metrics/Logs/Alarms), EventBridge, SQS/SNS</li>
-                        <li>IAM (roles, policies, STS), Organizations, Control Tower</li>
-                    </ul>
-                </div>
+        <article class="project card">
+          <h3>PgAnalyze on ECS</h3>
+          <p class="stack">RDS · ECS · pganalyze</p>
+          <p>Deployed collectors as code; unified DB metrics/logs. Reduced MTTR by <strong>50%</strong> with actionable alerts and runbooks.</p>
+        </article>
+      </div>
+    </section>
 
-                <div class="block">
-                    <h3>Kubernetes & Containers</h3>
-                    <ul>
-                        <li>EKS lifecycle (cluster creation/upgrade), node groups, Fargate</li>
-                        <li>Helm, Kustomize, Argo CD (GitOps), Ingress (ALB/NGINX)</li>
-                        <li>Service Mesh (intro), HPA/VPA, PodDisruptionBudgets</li>
-                        <li>RBAC, NetworkPolicies (Calico/Cilium), secrets management</li>
-                        <li>Docker build/scan/sign, multi-arch images, distroless</li>
-                    </ul>
-                </div>
+    <!-- SKILLS -->
+    <section id="skills" class="section">
+      <h2>Skills</h2>
 
-                <div class="block">
-                    <h3>Infrastructure as Code</h3>
-                    <ul>
-                        <li>Terraform (modules, workspaces, remote state backends)</li>
-                        <li>CloudFormation, CDK (familiar); Helm for app infra</li>
-                        <li>Policy-as-code: Terraform Cloud/OPA (foundational)</li>
-                    </ul>
-                </div>
+      <!-- quick summary as pills -->
+      <div class="pill-row">
+        <span class="pill">Platform Engineering</span>
+        <span class="pill">SRE & Reliability</span>
+        <span class="pill">Kubernetes on AWS (EKS)</span>
+        <span class="pill">Infrastructure as Code</span>
+        <span class="pill">GitOps & Automation</span>
+        <span class="pill">Observability & Incident Response</span>
+        <span class="pill">Cost Optimization</span>
+        <span class="pill">Security & Compliance</span>
+      </div>
 
-                <div class="block">
-                    <h3>CI/CD & Release Engineering</h3>
-                    <ul>
-                        <li>GitHub Actions (matrix builds, environments, OIDC)</li>
-                        <li>Argo CD (progressive delivery), blue/green & canary patterns</li>
-                        <li>Artifact mgmt: JFrog Artifactory, S3 artifacts, SBOM & signing</li>
-                        <li>Quality gates: unit/integration, container scans, IaC checks</li>
-                    </ul>
-                </div>
+      <!-- categorized detail -->
+      <div class="grid">
+        <div class="card">
+          <h3>AWS (Primary Cloud)</h3>
+          <ul>
+            <li>VPC, Subnets, IGW/NAT, Route Tables, VPC Peering, PrivateLink</li>
+            <li>EKS, ECS/Fargate, EC2, ASG, ECR, ALB/NLB</li>
+            <li>S3, CloudFront, KMS, Secrets Manager / SSM</li>
+            <li>RDS (Postgres/MySQL), DynamoDB, ElastiCache</li>
+            <li>CloudWatch (Metrics/Logs/Alarms), EventBridge, SQS/SNS</li>
+            <li>IAM (roles, policies, STS), AWS Organizations/Control Tower</li>
+          </ul>
+        </div>
 
-                <div class="block">
-                    <h3>Observability & Monitoring</h3>
-                    <ul>
-                        <li>Prometheus & Alertmanager, Grafana dashboards</li>
-                        <li>Datadog (APM, RUM, Logs, Synthetics)</li>
-                        <li>CloudWatch Metrics/Logs/Contributor Insights</li>
-                        <li>Tracing: OpenTelemetry (intro), X-Ray (basic)</li>
-                        <li>Runbooks, SLOs/SLIs, on-call & incident response</li>
-                    </ul>
-                </div>
+        <div class="card">
+          <h3>Kubernetes & Containers</h3>
+          <ul>
+            <li>EKS lifecycle, managed node groups, Fargate profiles</li>
+            <li>Helm, Kustomize, <strong>Argo CD (GitOps)</strong></li>
+            <li>Ingress (ALB/NGINX), HPA/VPA, PDBs, probes</li>
+            <li>RBAC, NetworkPolicies (Calico/Cilium), secrets management</li>
+            <li>Docker build/scan/sign, distroless & multi-arch images</li>
+          </ul>
+        </div>
 
-                <div class="block">
-                    <h3>Networking & Security</h3>
-                    <ul>
-                        <li>Zero-trust principles, least privilege IAM, AWS KMS</li>
-                        <li>WAF, Shield (L7/L3/4), Security Groups, NACLs, SG design</li>
-                        <li>mTLS/JWT at ingress, OAuth/OIDC federation</li>
-                        <li>Secrets (ASM/SSM), image/IaC scanning, supply-chain basics</li>
-                        <li>Compliance awareness: SOC 2 / ISO 27001 controls mapping</li>
-                    </ul>
-                </div>
+        <div class="card">
+          <h3>Infrastructure as Code</h3>
+          <ul>
+            <li><strong>Terraform</strong> modules, workspaces, remote state</li>
+            <li>CloudFormation / CDK (working knowledge)</li>
+            <li>Policy-as-code (OPA/Terraform Cloud) – foundational</li>
+          </ul>
+        </div>
 
-                <div class="block">
-                    <h3>Data & Messaging</h3>
-                    <ul>
-                        <li>RDS Postgres/MySQL operations, backups, pganalyze</li>
-                        <li>DynamoDB (keys, GSIs, capacity modes)</li>
-                        <li>SQS/SNS, EventBridge, step-functions (foundational)</li>
-                    </ul>
-                </div>
+        <div class="card">
+          <h3>CI/CD & Release Engineering</h3>
+          <ul>
+            <li><strong>GitHub Actions</strong> (matrix, environments, OIDC)</li>
+            <li>Progressive delivery (Argo), blue/green & canary</li>
+            <li>Artifacts: JFrog Artifactory, S3; SBOM & signing</li>
+            <li>Quality gates: unit/integration, container/IaC scans</li>
+          </ul>
+        </div>
 
-                <div class="block">
-                    <h3>Languages & Scripting</h3>
-                    <ul>
-                        <li>Python (automation/CLI), Bash (Unix ops)</li>
-                        <li>Go (tooling & platform utilities)</li>
-                        <li>YAML/JSON/TOML for config, Makefiles</li>
-                    </ul>
-                </div>
+        <div class="card">
+          <h3>Monitoring & Observability</h3>
+          <ul>
+            <li><strong>Prometheus & Alertmanager</strong>, <strong>Grafana</strong></li>
+            <li><strong>Datadog</strong> (APM, Logs, Synthetics), CloudWatch</li>
+            <li>Tracing: OpenTelemetry, AWS X-Ray (basic)</li>
+            <li>SLOs/SLIs, runbooks, on-call & incident response</li>
+          </ul>
+        </div>
 
-                <div class="block">
-                    <h3>Dev Productivity & AI</h3>
-                    <ul>
-                        <li>Git (PRs, trunk-based, conventional commits)</li>
-                        <li>AI copilots (Copilot/Claude/Cursor) with validation strategies</li>
-                        <li>Docs: ADRs, architecture diagrams, runbooks</li>
-                    </ul>
-                </div>
+        <div class="card">
+          <h3>Networking & Security</h3>
+          <ul>
+            <li>Zero-trust, least-privilege IAM, KMS</li>
+            <li>AWS WAF/Shield, Security Groups, NACLs</li>
+            <li>mTLS/JWT, OAuth/OIDC federation, ingress hardening</li>
+            <li>Secrets mgmt, image/IaC scanning, supply-chain basics</li>
+            <li>Compliance awareness: SOC 2 / ISO 27001</li>
+          </ul>
+        </div>
 
-            </div>
-        </section>
+        <div class="card">
+          <h3>Data & Messaging</h3>
+          <ul>
+            <li>RDS Postgres/MySQL ops, automated backups, pganalyze</li>
+            <li>DynamoDB design (keys, GSIs, capacity modes)</li>
+            <li>SQS/SNS, EventBridge; Step Functions (foundational)</li>
+          </ul>
+        </div>
 
-        <footer>
-            <small>© <span id="year"></span> Emmanuel Olaoye</small>
-        </footer>
-    </main>
-    <script src="./script.js"></script>
+        <div class="card">
+          <h3>Languages & Tooling</h3>
+          <ul>
+            <li>Python (automation/CLI), Bash; Go (platform utilities)</li>
+            <li>YAML/JSON/TOML, Makefiles, ADRs & diagrams</li>
+            <li>AI copilots (Copilot/Claude/Cursor) with validation strategies</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <small>© <span id="year"></span> Emmanuel Olaoye — Built with GitHub Pages</small>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
-
 </html>
