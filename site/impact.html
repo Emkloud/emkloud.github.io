@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en" data-theme="auto">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Impact — Emmanuel Olaoye</title>
+    <link rel="icon" href="./assets/favicon.ico" />
+    <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body data-page="impact">
+    <div class="bg" aria-hidden="true"></div>
+    <main class="container">
+        <nav class="topnav">
+            <a class="brand" href="index.html" aria-label="Home">EO</a>
+            <div class="navlinks">
+                <a href="projects.html">Projects</a>
+                <a href="skills.html">Skills</a>
+                <a href="impact.html">Impact</a>
+                <a href="experience.html">Experience</a>
+                <a href="contact.html">Contact</a>
+                <a href="./assets/Emmanuel_Olaoye.pdf" target="_blank" rel="noopener">Resume</a>
+                <button id="themeToggle" class="btn ghost" aria-label="Toggle theme">🌓</button>
+            </div>
+        </nav>
+
+        <header class="hero card">
+            <h1>Impact</h1>
+            <p class="lead">Outcomes and testimonials from platform & reliability work.</p>
+        </header>
+
+        <section class="section impact-grid">
+            <div class="impact card">
+                <p class="metric">99.99%+</p>
+                <p>Availability on multi-region EKS through GitOps & autoscaling.</p>
+            </div>
+            <div class="impact card">
+                <p class="metric">-40%</p>
+                <p>Ops toil reduction via Terraform modules & automated runbooks.</p>
+            </div>
+            <div class="impact card">
+                <p class="metric">-35%</p>
+                <p>Infra cost savings through serverless/event-driven patterns.</p>
+            </div>
+            <div class="impact card">
+                <p class="metric">-50% MTTR</p>
+                <p>pganalyze + unified telemetry + SLO-driven alerting.</p>
+            </div>
+        </section>
+
+        <section class="section grid">
+            <blockquote class="card quote">
+                <p>“Emmanuel elevated our platform reliability and deployment speed in weeks—not months.”</p>
+                <cite>— Engineering Manager</cite>
+            </blockquote>
+            <blockquote class="card quote">
+                <p>“His Terraform and GitHub Actions pipelines set the standard for our teams.”</p>
+                <cite>— Principal Architect</cite>
+            </blockquote>
+        </section>
+
+        <footer><small>© <span id="year"></span> Emmanuel Olaoye</small></footer>
+    </main>
+    <script src="./script.js"></script>
+</body>
+
+</html>

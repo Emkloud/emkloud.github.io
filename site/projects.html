@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en" data-theme="auto">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Projects — Emmanuel Olaoye</title>
+    <link rel="icon" href="./assets/favicon.ico" />
+    <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body data-page="projects">
+    <div class="bg" aria-hidden="true"></div>
+    <main class="container">
+        <nav class="topnav">
+            <a class="brand" href="index.html" aria-label="Home">EO</a>
+            <div class="navlinks">
+                <a href="projects.html">Projects</a>
+                <a href="skills.html">Skills</a>
+                <a href="impact.html">Impact</a>
+                <a href="experience.html">Experience</a>
+                <a href="contact.html">Contact</a>
+                <a href="./assets/Emmanuel_Olaoye.pdf" target="_blank" rel="noopener">Resume</a>
+                <button id="themeToggle" class="btn ghost" aria-label="Toggle theme">🌓</button>
+            </div>
+        </nav>
+
+        <header class="hero card">
+            <h1>Projects</h1>
+            <p class="lead">Selected work aligned to SRE/Platform/DevOps roles.</p>
+        </header>
+
+        <section class="section grid">
+            <article class="card" style="padding:18px">
+                <h3>EKS Multi-Cluster GitOps</h3>
+                <p class="stack">AWS · EKS · Argo CD · Terraform</p>
+                <ul>
+                    <li>Cross-account, multi-region blueprint with GitOps and policy-as-code.</li>
+                    <li>99.99% SLA; −40% ops toil using autoscaling, HPA/VPA, PDBs.</li>
+                    <li>Secure ingress (ALB/NGINX), NetworkPolicies, secrets hardening.</li>
+                </ul>
+            </article>
+
+            <article class="card" style="padding:18px">
+                <h3>Serverless Event Pipeline</h3>
+                <p class="stack">Lambda · EventBridge · SQS</p>
+                <ul>
+                    <li>Real-time ingestion with retries, DLQs, idempotency keys.</li>
+                    <li>−35% infra cost vs. always-on compute; simpler partner onboarding.</li>
+                </ul>
+            </article>
+
+            <article class="card" style="padding:18px">
+                <h3>PgAnalyze on ECS</h3>
+                <p class="stack">RDS · ECS · pganalyze</p>
+                <ul>
+                    <li>Deployed collectors as code; unified SQL/Locks/IO metrics and logs.</li>
+                    <li>−50% MTTR with SLO-based alerts and runbooks.</li>
+                </ul>
+            </article>
+        </section>
+
+        <footer><small>© <span id="year"></span> Emmanuel Olaoye</small></footer>
+    </main>
+    <script src="./script.js"></script>
+</body>
+
+</html>

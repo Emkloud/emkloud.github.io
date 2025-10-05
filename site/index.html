@@ -1,323 +1,112 @@
 <!doctype html>
 <html lang="en" data-theme="auto">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Emmanuel Olaoye — Senior Cloud/DevOps Engineer</title>
-  <meta name="description" content="Senior Cloud/DevOps Engineer specializing in AWS, EKS, Terraform, CI/CD, observability, and secure platform engineering." />
-  <link rel="icon" href="./assets/favicon.ico" type="image/x-icon" />
+  <meta name="description"
+    content="Senior Cloud/DevOps Engineer: AWS, Kubernetes (EKS), Terraform, CI/CD, observability, security." />
+  <link rel="icon" href="./assets/favicon.ico" />
   <link rel="stylesheet" href="./styles.css" />
 </head>
-<body>
-  <div class="bg-gradient" aria-hidden="true"></div>
 
+<body data-page="index">
+  <div class="bg" aria-hidden="true"></div>
   <main class="container">
-    <!-- NAV -->
     <nav class="topnav">
-      <a class="brand" href="#top" aria-label="Home">EO</a>
+      <a class="brand" href="index.html" aria-label="Home">EO</a>
       <div class="navlinks">
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#impact">Impact</a>
-        <a href="#experience">Experience</a>
-        <a href="#contact">Contact</a>
+        <a href="projects.html">Projects</a>
+        <a href="skills.html">Skills</a>
+        <a href="impact.html">Impact</a>
+        <a href="experience.html">Experience</a>
+        <a href="contact.html">Contact</a>
         <a href="./assets/Emmanuel_Olaoye.pdf" target="_blank" rel="noopener">Resume</a>
         <button id="themeToggle" class="btn ghost" aria-label="Toggle theme">🌓</button>
       </div>
     </nav>
 
-    <!-- HERO (TEXT-ONLY) -->
-    <header id="top" class="hero card">
-      <div class="hero-copy">
-        <h1>Emmanuel Olaoye</h1>
-        <p class="lead">
-          Senior Cloud/DevOps Engineer focused on <strong>AWS</strong>, <strong>Kubernetes (EKS)</strong>,
-          <strong>Terraform</strong>, and <strong>CI/CD</strong>. I build secure, scalable, and cost-efficient
-          platforms, enable GitOps automation, and turn observability into rapid feedback for engineering teams.
-        </p>
-        <div class="actions">
-          <a class="btn primary" href="./assets/Emmanuel_Olaoye.pdf" target="_blank" rel="noopener">Download Resume</a>
-          <a class="btn" href="#projects">View Projects</a>
-          <a class="btn" href="#skills">Explore Skills</a>
-        </div>
-        <div class="socials">
-          <a class="link" href="https://github.com/Emkloud" target="_blank" rel="noopener" aria-label="GitHub">GitHub</a>
-          <span class="dot">•</span>
-          <a class="link" href="https://www.linkedin.com/in/" target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn</a>
-          <span class="dot">•</span>
-          <!-- Email: mailto + Gmail compose + copy -->
-          <a class="link" id="mailtoLink" href="mailto:emma.oyesola@gmail.com?subject=Hello%20Emmanuel&body=Hi%20Emmanuel," aria-label="Email">Email</a>
-          <span class="dot">•</span>
-          <a class="link" href="https://mail.google.com/mail/?view=cm&to=emma.oyesola@gmail.com&su=Hello%20Emmanuel" target="_blank" rel="noopener" aria-label="Compose in Gmail">Gmail</a>
-          <span class="dot">•</span>
-          <button id="copyEmail" class="link-like" type="button" aria-label="Copy email">Copy</button>
-        </div>
+    <header class="hero card">
+      <h1>Emmanuel Olaoye</h1>
+      <p class="lead">
+        Senior Cloud/DevOps Engineer focused on <strong>AWS</strong>, <strong>Kubernetes (EKS)</strong>,
+        <strong>Terraform</strong>, and <strong>CI/CD</strong>. I design secure, scalable platforms,
+        drive GitOps automation, and turn observability into rapid feedback for engineering teams.
+      </p>
+      <div class="actions">
+        <a class="btn primary" href="./assets/Emmanuel_Olaoye.pdf" target="_blank" rel="noopener">Download Resume</a>
+        <a class="btn" href="projects.html">View Projects</a>
+        <a class="btn" href="skills.html">Explore Skills</a>
+      </div>
+      <div class="links">
+        <a class="link" href="https://github.com/Emkloud" target="_blank" rel="noopener">GitHub</a>
+        <span class="dot">•</span>
+        <a class="link" href="https://www.linkedin.com/in/" target="_blank" rel="noopener">LinkedIn</a>
+        <span class="dot">•</span>
+        <a class="link" href="mailto:emma.oyesola@gmail.com?subject=Hello%20Emmanuel&body=Hi%20Emmanuel,">Email</a>
+        <span class="dot">•</span>
+        <a class="link" href="https://mail.google.com/mail/?view=cm&to=emma.oyesola@gmail.com&su=Hello%20Emmanuel"
+          target="_blank" rel="noopener">Gmail</a>
+        <span class="dot">•</span>
+        <button id="copyEmail" class="link-like" type="button">Copy</button>
       </div>
     </header>
 
-    <!-- LOGO STRIP -->
-    <section aria-label="Technologies" class="logos section">
+    <section class="section">
       <div class="logo-grid card">
         <div class="logo">
-          <svg viewBox="0 0 64 64" role="img" aria-label="AWS"><path d="M7 45c16 10 34 10 50 0" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/><text x="10" y="28" font-size="18" font-weight="700" fill="currentColor">AWS</text></svg>
+          <svg viewBox="0 0 64 64" aria-label="AWS">
+            <path d="M7 45c16 10 34 10 50 0" fill="none" stroke="currentColor" stroke-width="4"
+              stroke-linecap="round" /><text x="10" y="28" font-size="18" font-weight="700"
+              fill="currentColor">AWS</text>
+          </svg>
         </div>
         <div class="logo">
-          <svg viewBox="0 0 64 64" role="img" aria-label="Kubernetes"><circle cx="32" cy="32" r="24" fill="none" stroke="currentColor" stroke-width="4"/><text x="12" y="38" font-size="14" font-weight="700" fill="currentColor">k8s</text></svg>
+          <svg viewBox="0 0 64 64" aria-label="Kubernetes">
+            <circle cx="32" cy="32" r="24" fill="none" stroke="currentColor" stroke-width="4" /><text x="12" y="38"
+              font-size="14" font-weight="700" fill="currentColor">k8s</text>
+          </svg>
         </div>
         <div class="logo">
-          <svg viewBox="0 0 64 64" role="img" aria-label="Terraform"><path d="M6 10l22 12v12L6 22zM36 10l22 12v12L36 22zM28 36l22 12v12L28 48z" fill="currentColor"/></svg>
+          <svg viewBox="0 0 64 64" aria-label="Terraform">
+            <path d="M6 10l22 12v12L6 22zM36 10l22 12v12L36 22zM28 36l22 12v12L28 48z" fill="currentColor" />
+          </svg>
         </div>
         <div class="logo">
-          <svg viewBox="0 0 64 64" role="img" aria-label="Datadog"><rect x="10" y="12" width="44" height="40" rx="6" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="26" cy="34" r="6" fill="currentColor"/><path d="M36 28h12v14" stroke="currentColor" stroke-width="3" fill="none"/></svg>
+          <svg viewBox="0 0 64 64" aria-label="Datadog">
+            <rect x="10" y="12" width="44" height="40" rx="6" fill="none" stroke="currentColor" stroke-width="3" />
+            <circle cx="26" cy="34" r="6" fill="currentColor" />
+            <path d="M36 28h12v14" stroke="currentColor" stroke-width="3" fill="none" />
+          </svg>
         </div>
       </div>
     </section>
 
-    <!-- PROJECTS -->
-    <section id="projects" class="section">
-      <h2>Projects</h2>
-      <div class="grid">
-        <article class="project card">
-          <h3>EKS Multi-Cluster GitOps</h3>
-          <p class="stack">AWS · EKS · Argo CD · Terraform</p>
-          <p>Cross-account, multi-region EKS with GitOps. Achieved <strong>99.99% SLA</strong> and reduced ops toil by <strong>40%</strong> using autoscaling, PDBs, and policy-as-code.</p>
-        </article>
-
-        <article class="project card">
-          <h3>Serverless Event Pipeline</h3>
-          <p class="stack">Lambda · EventBridge · SQS</p>
-          <p>Event-driven ingestion for real-time processing and retries. Cut infrastructure cost by <strong>35%</strong> and accelerated onboarding of new data sources.</p>
-        </article>
-
-        <article class="project card">
-          <h3>PgAnalyze on ECS</h3>
-          <p class="stack">RDS · ECS · pganalyze</p>
-          <p>Deployed collectors as code; unified DB metrics/logs. Reduced MTTR by <strong>50%</strong> with actionable alerts and runbooks.</p>
-        </article>
-      </div>
+    <section class="section grid">
+      <article class="card" style="padding:16px">
+        <h3>Featured Project</h3>
+        <p class="stack">EKS Multi-Cluster GitOps</p>
+        <p>Cross-account, multi-region; 99.99% SLA; −40% ops toil via autoscaling, PDBs, policy-as-code.</p>
+        <p><a class="link" href="projects.html">See all projects →</a></p>
+      </article>
+      <article class="card" style="padding:16px">
+        <h3>Impact</h3>
+        <p class="stack">Results that matter</p>
+        <p>−35% infra cost (serverless/event-driven), −50% MTTR (pganalyze + unified telemetry), SLOs that stick.</p>
+        <p><a class="link" href="impact.html">Explore impact →</a></p>
+      </article>
+      <article class="card" style="padding:16px">
+        <h3>Experience</h3>
+        <p class="stack">Senior Cloud/DevOps</p>
+        <p>EKS at scale, Terraform modules, Actions pipelines, incident response, compliance-aware delivery.</p>
+        <p><a class="link" href="experience.html">View timeline →</a></p>
+      </article>
     </section>
 
-    <!-- SKILLS -->
-    <section id="skills" class="section">
-      <h2>Skills</h2>
-
-      <div class="pill-row">
-        <span class="pill">Platform Engineering</span>
-        <span class="pill">SRE & Reliability</span>
-        <span class="pill">Kubernetes (EKS)</span>
-        <span class="pill">Infrastructure as Code</span>
-        <span class="pill">GitOps & Automation</span>
-        <span class="pill">Observability</span>
-        <span class="pill">Cost Optimization</span>
-        <span class="pill">Security & Compliance</span>
-      </div>
-
-      <div class="grid">
-        <div class="card">
-          <h3>AWS (Primary Cloud)</h3>
-          <ul>
-            <li>VPC, Subnets, IGW/NAT, Route Tables, Peering, PrivateLink</li>
-            <li>EKS, ECS/Fargate, EC2, ASG, ECR, ALB/NLB</li>
-            <li>S3, CloudFront, KMS, Secrets Manager / SSM</li>
-            <li>RDS (Postgres/MySQL), DynamoDB, ElastiCache</li>
-            <li>CloudWatch (Metrics/Logs/Alarms), EventBridge, SQS/SNS</li>
-            <li>IAM (roles/policies/STS), Organizations / Control Tower</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <h3>Kubernetes & Containers</h3>
-          <ul>
-            <li>EKS lifecycle, node groups, Fargate profiles</li>
-            <li>Helm, Kustomize, <strong>Argo CD</strong> (GitOps)</li>
-            <li>Ingress (ALB/NGINX), HPA/VPA, PDBs, probes</li>
-            <li>RBAC, NetworkPolicies (Calico/Cilium), secrets mgmt</li>
-            <li>Docker build/scan/sign, distroless & multi-arch images</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <h3>Infrastructure as Code</h3>
-          <ul>
-            <li><strong>Terraform</strong> modules, workspaces, remote state</li>
-            <li>CloudFormation / CDK (working knowledge)</li>
-            <li>Policy-as-code (OPA/TFC) – foundational</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <h3>CI/CD & Release</h3>
-          <ul>
-            <li><strong>GitHub Actions</strong> (matrix, environments, OIDC)</li>
-            <li>Progressive delivery (Argo), blue/green & canary</li>
-            <li>Artifacts: JFrog Artifactory, S3; SBOM & signing</li>
-            <li>Quality gates: unit/integration, container/IaC scans</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <h3>Monitoring & Observability</h3>
-          <ul>
-            <li><strong>Prometheus & Alertmanager</strong>, <strong>Grafana</strong></li>
-            <li><strong>Datadog</strong> (APM, Logs, Synthetics), CloudWatch</li>
-            <li>Tracing: OpenTelemetry, AWS X-Ray (basic)</li>
-            <li>SLOs/SLIs, runbooks, on-call & incident response</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <h3>Networking & Security</h3>
-          <ul>
-            <li>Zero-trust, least-privilege IAM, KMS</li>
-            <li>AWS WAF/Shield, Security Groups, NACLs</li>
-            <li>mTLS/JWT, OAuth/OIDC federation, ingress hardening</li>
-            <li>Secrets mgmt, image/IaC scanning, supply-chain basics</li>
-            <li>Compliance awareness: SOC 2 / ISO 27001</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <h3>Data & Messaging</h3>
-          <ul>
-            <li>RDS Postgres/MySQL ops, automated backups, pganalyze</li>
-            <li>DynamoDB design (keys, GSIs, capacity modes)</li>
-            <li>SQS/SNS, EventBridge; Step Functions (foundational)</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <h3>Languages & Tooling</h3>
-          <ul>
-            <li>Python (automation/CLI), Bash; Go (platform tools)</li>
-            <li>YAML/JSON/TOML, Makefiles, ADRs & diagrams</li>
-            <li>AI copilots (Copilot/Claude/Cursor) with validation strategies</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- IMPACT / TESTIMONIALS -->
-    <section id="impact" class="section">
-      <h2>Impact</h2>
-      <div class="impact-grid">
-        <div class="impact card">
-          <p class="impact-metric">99.99%+</p>
-          <p class="impact-text">Availability across multi-region EKS with GitOps and autoscaling.</p>
-        </div>
-        <div class="impact card">
-          <p class="impact-metric">-40%</p>
-          <p class="impact-text">Ops toil reduction via Terraform modules & automated runbooks.</p>
-        </div>
-        <div class="impact card">
-          <p class="impact-metric">-35%</p>
-          <p class="impact-text">Infra cost savings using serverless/event-driven patterns.</p>
-        </div>
-        <div class="impact card">
-          <p class="impact-metric">-50% MTTR</p>
-          <p class="impact-text">Through pganalyze + unified logging/metrics and SLO-driven alerts.</p>
-        </div>
-      </div>
-
-      <div class="quotes grid">
-        <blockquote class="card">
-          <p>“Emmanuel elevated our platform reliability and deployment speed in weeks—not months.”</p>
-          <cite>— Engineering Manager</cite>
-        </blockquote>
-        <blockquote class="card">
-          <p>“His Terraform and GitHub Actions pipelines set the standard for our teams.”</p>
-          <cite>— Principal Architect</cite>
-        </blockquote>
-      </div>
-    </section>
-
-    <!-- EXPERIENCE TIMELINE + CERTS -->
-    <section id="experience" class="section">
-      <h2>Experience</h2>
-      <ol class="timeline">
-        <li class="card">
-          <div class="time">2022 — Present</div>
-          <div class="role">
-            <h3>Senior Cloud/DevOps Engineer</h3>
-            <p>Led AWS/EKS platform modernization, authored Terraform modules, and implemented GitOps + observability across environments.</p>
-          </div>
-        </li>
-        <li class="card">
-          <div class="time">2019 — 2022</div>
-          <div class="role">
-            <h3>DevOps Engineer</h3>
-            <p>Owned CI/CD, built serverless event pipelines, and improved incident response with SLOs and runbooks.</p>
-          </div>
-        </li>
-      </ol>
-
-      <div class="certs card">
-        <h3>Certifications</h3>
-        <ul>
-          <li>AWS Solutions Architect (or equivalent)</li>
-          <li>CKA/CKAD (or equivalent Kubernetes cert)</li>
-          <li>HashiCorp Terraform (knowledge/experience)</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="section">
-      <h2>Contact</h2>
-      <div class="contact card">
-        <p>Interested in platform reliability, EKS at scale, or automation initiatives? Let’s talk.</p>
-        <div class="contact-actions">
-          <a class="btn primary" href="mailto:emma.oyesola@gmail.com?subject=Hello%20Emmanuel&body=Hi%20Emmanuel," aria-label="Send email">Email</a>
-          <a class="btn" href="https://mail.google.com/mail/?view=cm&to=emma.oyesola@gmail.com&su=Hello%20Emmanuel" target="_blank" rel="noopener">Open in Gmail</a>
-          <button class="btn" type="button" id="copyEmail2">Copy Address</button>
-          <a class="btn" href="https://github.com/Emkloud" target="_blank" rel="noopener">GitHub</a>
-          <a class="btn" href="https://www.linkedin.com/in/" target="_blank" rel="noopener">LinkedIn</a>
-        </div>
-      </div>
-    </section>
-
-    <footer>
-      <small>© <span id="year"></span> Emmanuel Olaoye — Built with GitHub Pages</small>
-    </footer>
+    <footer><small>© <span id="year"></span> Emmanuel Olaoye — Built with GitHub Pages</small></footer>
   </main>
-
-  <script>
-    // Year
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Theme toggle with persistence
-    const btn = document.getElementById('themeToggle');
-    const saved = localStorage.getItem('theme');
-    if (saved) document.documentElement.setAttribute('data-theme', saved);
-    function icon() {
-      const t = document.documentElement.getAttribute('data-theme') || 'auto';
-      btn.textContent = t === 'light' ? '🌞' : t === 'dark' ? '🌙' : '🌓';
-      btn.title = `Theme: ${t}`;
-    }
-    icon();
-    btn.addEventListener('click', () => {
-      const current = document.documentElement.getAttribute('data-theme') || 'auto';
-      const next = current === 'auto' ? 'light' : current === 'light' ? 'dark' : 'auto';
-      document.documentElement.setAttribute('data-theme', next);
-      localStorage.setItem('theme', next);
-      icon();
-    });
-
-    // Copy-to-clipboard helpers for email
-    const email = "emma.oyesola@gmail.com";
-    function copyEmail() {
-      navigator.clipboard.writeText(email).then(() => {
-        alert("Email address copied to clipboard.");
-      }).catch(() => {
-        // Fallback for older browsers
-        const el = document.createElement('textarea');
-        el.value = email; document.body.appendChild(el); el.select();
-        try { document.execCommand('copy'); alert("Email address copied to clipboard."); }
-        catch(e){ alert("Email: " + email); }
-        document.body.removeChild(el);
-      });
-    }
-    document.getElementById('copyEmail')?.addEventListener('click', copyEmail);
-    document.getElementById('copyEmail2')?.addEventListener('click', copyEmail);
-  </script>
+  <script src="./script.js"></script>
 </body>
+
 </html>
