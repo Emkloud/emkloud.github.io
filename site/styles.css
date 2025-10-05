@@ -106,19 +106,28 @@ h2 {
 /* ===== Hero ===== */
 .hero {
     display: grid;
-    grid-template-columns: 160px 1fr;
+    grid-template-columns: 170px 1fr;
     gap: 24px;
     padding: 28px;
 }
 
-.profile-photo {
-    width: 160px;
-    height: 160px;
+.avatar {
+    width: 170px;
+    height: 170px;
     border-radius: 50%;
+    /* Keep the circle, but show more hair by shifting the crop upward */
     object-fit: cover;
+    /* fill the circle */
+    object-position: 50% 18%;
+    /* x y — lower % raises the view to include more hair */
     border: 3px solid #00bcd4;
     box-shadow: 0 4px 12px rgba(0, 188, 212, .35);
+    background: #0b152a;
 }
+
+/* If you ever want zero crop, swap to:
+   object-fit: contain; object-position: top center; background:#0b152a; padding:4px;
+*/
 
 .hero-copy h1 {
     margin: 0 0 10px;
@@ -250,9 +259,10 @@ footer {
         grid-template-columns: 1fr
     }
 
-    .profile-photo {
-        width: 120px;
-        height: 120px
+    .avatar {
+        width: 140px;
+        height: 140px;
+        object-position: 50% 14%
     }
 
     .hero-copy h1 {

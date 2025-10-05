@@ -5,18 +5,16 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Emmanuel Olaoye — Senior Cloud/DevOps Engineer</title>
   <meta name="description" content="Senior Cloud/DevOps Engineer specializing in AWS, EKS, Terraform, CI/CD, observability, and secure platform engineering." />
-  <!-- Optional favicon (place at site/assets/favicon.ico) -->
   <link rel="icon" href="./assets/favicon.ico" type="image/x-icon" />
   <link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
-  <!-- Soft gradient background -->
   <div class="bg-gradient" aria-hidden="true"></div>
 
   <main class="container">
     <!-- NAV -->
     <nav class="topnav">
-      <a class="brand" href="#top">EO</a>
+      <a class="brand" href="#top" aria-label="Home">EO</a>
       <div class="navlinks">
         <a href="#projects">Projects</a>
         <a href="#skills">Skills</a>
@@ -26,7 +24,8 @@
 
     <!-- HERO / ABOUT -->
     <header id="top" class="hero card">
-      <img class="profile-photo" src="./assets/profile.png" alt="Emmanuel Olaoye" onerror="this.style.display='none'">
+      <!-- Adjusted avatar shows more hair by shifting crop upward (see CSS) -->
+      <img class="avatar" src="./assets/profile.png" alt="Emmanuel Olaoye" onerror="this.style.display='none'">
       <div class="hero-copy">
         <h1>Emmanuel Olaoye</h1>
         <p class="lead">
@@ -44,7 +43,7 @@
           <span class="dot">•</span>
           <a class="link" href="https://www.linkedin.com/in/" target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn</a>
           <span class="dot">•</span>
-          <a class="link" href="mailto:your.email@example.com" aria-label="Email">Email</a>
+          <a class="link" href="mailto:emma.oyesola@gmail.com" aria-label="Email">emma.oyesola@gmail.com</a>
         </div>
       </div>
     </header>
@@ -77,11 +76,10 @@
     <section id="skills" class="section">
       <h2>Skills</h2>
 
-      <!-- quick summary as pills -->
       <div class="pill-row">
         <span class="pill">Platform Engineering</span>
         <span class="pill">SRE & Reliability</span>
-        <span class="pill">Kubernetes on AWS (EKS)</span>
+        <span class="pill">Kubernetes (EKS)</span>
         <span class="pill">Infrastructure as Code</span>
         <span class="pill">GitOps & Automation</span>
         <span class="pill">Observability & Incident Response</span>
@@ -89,17 +87,16 @@
         <span class="pill">Security & Compliance</span>
       </div>
 
-      <!-- categorized detail -->
       <div class="grid">
         <div class="card">
           <h3>AWS (Primary Cloud)</h3>
           <ul>
-            <li>VPC, Subnets, IGW/NAT, Route Tables, VPC Peering, PrivateLink</li>
+            <li>VPC, Subnets, IGW/NAT, Route Tables, Peering, PrivateLink</li>
             <li>EKS, ECS/Fargate, EC2, ASG, ECR, ALB/NLB</li>
             <li>S3, CloudFront, KMS, Secrets Manager / SSM</li>
             <li>RDS (Postgres/MySQL), DynamoDB, ElastiCache</li>
             <li>CloudWatch (Metrics/Logs/Alarms), EventBridge, SQS/SNS</li>
-            <li>IAM (roles, policies, STS), AWS Organizations/Control Tower</li>
+            <li>IAM (roles/policies/STS), Organizations / Control Tower</li>
           </ul>
         </div>
 
@@ -107,9 +104,9 @@
           <h3>Kubernetes & Containers</h3>
           <ul>
             <li>EKS lifecycle, managed node groups, Fargate profiles</li>
-            <li>Helm, Kustomize, <strong>Argo CD (GitOps)</strong></li>
+            <li>Helm, Kustomize, <strong>Argo CD</strong> (GitOps)</li>
             <li>Ingress (ALB/NGINX), HPA/VPA, PDBs, probes</li>
-            <li>RBAC, NetworkPolicies (Calico/Cilium), secrets management</li>
+            <li>RBAC, NetworkPolicies (Calico/Cilium), secrets mgmt</li>
             <li>Docker build/scan/sign, distroless & multi-arch images</li>
           </ul>
         </div>
@@ -119,7 +116,7 @@
           <ul>
             <li><strong>Terraform</strong> modules, workspaces, remote state</li>
             <li>CloudFormation / CDK (working knowledge)</li>
-            <li>Policy-as-code (OPA/Terraform Cloud) – foundational</li>
+            <li>Policy-as-code (OPA/TFC) – foundational</li>
           </ul>
         </div>
 
