@@ -1,4 +1,4 @@
-/* ===== Design Tokens ===== */
+/* ========== THEMES & TOKENS ========== */
 :root {
     --bg: #0a1020;
     --bg-grad-1: #0a1020;
@@ -12,7 +12,46 @@
     --shadow: 0 8px 20px rgba(0, 0, 0, .25);
 }
 
-/* ===== Base ===== */
+/* Light theme */
+@media (prefers-color-scheme: light) {
+    :root {
+        --bg: #f7f9ff;
+        --bg-grad-1: #f7f9ff;
+        --bg-grad-2: #ebf2ff;
+        --panel: #ffffff;
+        --card: #ffffff;
+        --text: #0d1b2a;
+        --muted: #405575;
+        --border: #d9e3f5;
+        --accent: #2b76ff;
+    }
+}
+
+html[data-theme="light"] {
+    --bg: #f7f9ff;
+    --bg-grad-1: #f7f9ff;
+    --bg-grad-2: #ebf2ff;
+    --panel: #ffffff;
+    --card: #ffffff;
+    --text: #0d1b2a;
+    --muted: #405575;
+    --border: #d9e3f5;
+    --accent: #2b76ff;
+}
+
+html[data-theme="dark"] {
+    --bg: #0a1020;
+    --bg-grad-1: #0a1020;
+    --bg-grad-2: #0e1630;
+    --panel: #101a2e;
+    --card: #0f1726;
+    --text: #e6ecff;
+    --muted: #a9b2c7;
+    --border: #1e2a44;
+    --accent: #6ec1ff;
+}
+
+/* ========== BASE ========== */
 * {
     box-sizing: border-box
 }
@@ -41,7 +80,6 @@ body {
         linear-gradient(180deg, var(--bg-grad-1), var(--bg-grad-2));
 }
 
-/* ===== Layout ===== */
 .container {
     max-width: 1100px;
     margin: 0 auto;
@@ -70,7 +108,7 @@ h2 {
     margin: 0 0 14px
 }
 
-/* ===== Top Nav ===== */
+/* ========== NAV ========== */
 .topnav {
     display: flex;
     align-items: center;
@@ -92,10 +130,17 @@ h2 {
     box-shadow: 0 6px 18px rgba(0, 0, 0, .35);
 }
 
+.navlinks {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
 .navlinks a {
     color: var(--text);
     text-decoration: none;
-    margin-left: 14px;
+    padding: 6px 8px;
+    border-radius: 8px;
 }
 
 .navlinks a:hover {
@@ -103,7 +148,16 @@ h2 {
     text-decoration: underline
 }
 
-/* ===== Hero ===== */
+.btn.ghost {
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--text);
+    padding: 6px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* ========== HERO ========== */
 .hero {
     display: grid;
     grid-template-columns: 170px 1fr;
@@ -111,23 +165,32 @@ h2 {
     padding: 28px;
 }
 
-.avatar {
+.avatar-wrap {
+    /* Adjust these to reframe the photo quickly */
+    --zoom: 1.16;
+    /* 1.10–1.25 works well */
+    --x: 50%;
+    /* 0% left … 100% right */
+    --y: 26%;
+    /* lower value shows more hair; higher shows more chest */
     width: 170px;
     height: 170px;
     border-radius: 50%;
-    /* Keep the circle, but show more hair by shifting the crop upward */
-    object-fit: cover;
-    /* fill the circle */
-    object-position: 50% 18%;
-    /* x y — lower % raises the view to include more hair */
     border: 3px solid #00bcd4;
     box-shadow: 0 4px 12px rgba(0, 188, 212, .35);
+    overflow: hidden;
     background: #0b152a;
+    display: grid;
+    place-items: center;
 }
 
-/* If you ever want zero crop, swap to:
-   object-fit: contain; object-position: top center; background:#0b152a; padding:4px;
-*/
+.avatar-wrap img {
+    width: calc(100% * var(--zoom));
+    height: calc(100% * var(--zoom));
+    object-fit: cover;
+    transform: translate(calc((50% - var(--x)) / 100 * (100% - 100% * var(--zoom))),
+            calc((50% - var(--y)) / 100 * (100% - 100% * var(--zoom))));
+}
 
 .hero-copy h1 {
     margin: 0 0 10px;
@@ -194,7 +257,27 @@ h2 {
     margin: 0 8px
 }
 
-/* ===== Cards & Grids ===== */
+/* ========== LOGO STRIP ========== */
+.logos .logo-grid {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    padding: 14px;
+}
+
+.logo {
+    display: grid;
+    place-items: center;
+    padding: 6px 0;
+    color: var(--muted);
+}
+
+.logo svg {
+    width: 88px;
+    height: 44px;
+}
+
+/* ========== CARDS/GRIDS ========== */
 .grid {
     display: grid;
     gap: 16px;
@@ -220,7 +303,7 @@ h2 {
     margin: .2rem 0 .6rem
 }
 
-/* ===== Skills ===== */
+/* ========== SKILLS ========== */
 .pill-row {
     margin: 6px 0 12px
 }
@@ -243,26 +326,40 @@ h2 {
 
 .card li {
     margin: .25rem 0;
-    color: #d7def8
+    color: color-mix(in oklab, var(--text) 84%, transparent)
 }
 
-/* ===== Footer ===== */
+/* ========== CONTACT ========== */
+.contact {
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.contact-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+/* ========== FOOTER & RESPONSIVE ========== */
 footer {
     margin-top: 28px;
     color: var(--muted);
     text-align: left
 }
 
-/* ===== Responsive & Motion ===== */
 @media (max-width:820px) {
     .hero {
         grid-template-columns: 1fr
     }
 
-    .avatar {
-        width: 140px;
-        height: 140px;
-        object-position: 50% 14%
+    .avatar-wrap {
+        width: 150px;
+        height: 150px;
+        --zoom: 1.18;
+        --y: 24%
     }
 
     .hero-copy h1 {

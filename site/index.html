@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="auto">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -18,14 +18,19 @@
       <div class="navlinks">
         <a href="#projects">Projects</a>
         <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
         <a href="./assets/Emmanuel_Olaoye.pdf" target="_blank" rel="noopener">Resume</a>
+        <button id="themeToggle" class="btn ghost" aria-label="Toggle theme">🌙</button>
       </div>
     </nav>
 
-    <!-- HERO / ABOUT -->
+    <!-- HERO -->
     <header id="top" class="hero card">
-      <!-- Adjusted avatar shows more hair by shifting crop upward (see CSS) -->
-      <img class="avatar" src="./assets/profile.png" alt="Emmanuel Olaoye" onerror="this.style.display='none'">
+      <!-- Circular mask with adjustable zoom/focus (see CSS) -->
+      <div class="avatar-wrap" aria-hidden="true">
+        <img src="./assets/profile.png" alt="Emmanuel Olaoye">
+      </div>
+
       <div class="hero-copy">
         <h1>Emmanuel Olaoye</h1>
         <p class="lead">
@@ -33,20 +38,41 @@
           <strong>Terraform</strong>, and <strong>CI/CD</strong>. I design secure, scalable, cost-efficient
           platforms, drive GitOps automation, and turn observability into rapid feedback for engineering teams.
         </p>
+
         <div class="actions">
           <a class="btn primary" href="./assets/Emmanuel_Olaoye.pdf" target="_blank" rel="noopener">Download Resume</a>
           <a class="btn" href="#projects">View Projects</a>
           <a class="btn" href="#skills">Explore Skills</a>
         </div>
+
         <div class="socials">
           <a class="link" href="https://github.com/Emkloud" target="_blank" rel="noopener" aria-label="GitHub">GitHub</a>
           <span class="dot">•</span>
           <a class="link" href="https://www.linkedin.com/in/" target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn</a>
           <span class="dot">•</span>
-          <a class="link" href="mailto:emma.oyesola@gmail.com" aria-label="Email">emma.oyesola@gmail.com</a>
+          <a class="link" href="mailto:emma.oyesola@gmail.com?subject=Hello%20Emmanuel&body=Hi%20Emmanuel," aria-label="Email">Email</a>
         </div>
       </div>
     </header>
+
+    <!-- TECH LOGO STRIP -->
+    <section aria-label="Technologies" class="logos section">
+      <div class="logo-grid card">
+        <!-- Minimal inline SVGs (no external requests) -->
+        <div class="logo">
+          <svg viewBox="0 0 64 64" role="img" aria-label="AWS"><path d="M7 45c16 10 34 10 50 0" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/><text x="10" y="28" font-size="18" font-weight="700" fill="currentColor">AWS</text></svg>
+        </div>
+        <div class="logo">
+          <svg viewBox="0 0 64 64" role="img" aria-label="Kubernetes"><circle cx="32" cy="32" r="24" fill="none" stroke="currentColor" stroke-width="4"/><text x="12" y="38" font-size="14" font-weight="700" fill="currentColor">k8s</text></svg>
+        </div>
+        <div class="logo">
+          <svg viewBox="0 0 64 64" role="img" aria-label="Terraform"><path d="M6 10l22 12v12L6 22zM36 10l22 12v12L36 22zM28 36l22 12v12L28 48z" fill="currentColor"/></svg>
+        </div>
+        <div class="logo">
+          <svg viewBox="0 0 64 64" role="img" aria-label="Datadog"><rect x="10" y="12" width="44" height="40" rx="6" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="26" cy="34" r="6" fill="currentColor"/><path d="M36 28h12v14" stroke="currentColor" stroke-width="3" fill="none"/></svg>
+        </div>
+      </div>
+    </section>
 
     <!-- PROJECTS -->
     <section id="projects" class="section">
@@ -82,7 +108,7 @@
         <span class="pill">Kubernetes (EKS)</span>
         <span class="pill">Infrastructure as Code</span>
         <span class="pill">GitOps & Automation</span>
-        <span class="pill">Observability & Incident Response</span>
+        <span class="pill">Observability</span>
         <span class="pill">Cost Optimization</span>
         <span class="pill">Security & Compliance</span>
       </div>
@@ -103,7 +129,7 @@
         <div class="card">
           <h3>Kubernetes & Containers</h3>
           <ul>
-            <li>EKS lifecycle, managed node groups, Fargate profiles</li>
+            <li>EKS lifecycle, node groups, Fargate profiles</li>
             <li>Helm, Kustomize, <strong>Argo CD</strong> (GitOps)</li>
             <li>Ingress (ALB/NGINX), HPA/VPA, PDBs, probes</li>
             <li>RBAC, NetworkPolicies (Calico/Cilium), secrets mgmt</li>
@@ -121,7 +147,7 @@
         </div>
 
         <div class="card">
-          <h3>CI/CD & Release Engineering</h3>
+          <h3>CI/CD & Release</h3>
           <ul>
             <li><strong>GitHub Actions</strong> (matrix, environments, OIDC)</li>
             <li>Progressive delivery (Argo), blue/green & canary</li>
@@ -163,10 +189,23 @@
         <div class="card">
           <h3>Languages & Tooling</h3>
           <ul>
-            <li>Python (automation/CLI), Bash; Go (platform utilities)</li>
+            <li>Python (automation/CLI), Bash; Go (platform tools)</li>
             <li>YAML/JSON/TOML, Makefiles, ADRs & diagrams</li>
             <li>AI copilots (Copilot/Claude/Cursor) with validation strategies</li>
           </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <div class="contact card">
+        <p>Interested in platform reliability, EKS at scale, or automation initiatives? Let’s talk.</p>
+        <div class="contact-actions">
+          <a class="btn primary" href="mailto:emma.oyesola@gmail.com?subject=Hello%20Emmanuel&body=Hi%20Emmanuel," aria-label="Send email">Email</a>
+          <a class="btn" href="https://github.com/Emkloud" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn" href="https://www.linkedin.com/in/" target="_blank" rel="noopener">LinkedIn</a>
         </div>
       </div>
     </section>
@@ -177,7 +216,28 @@
   </main>
 
   <script>
+    // Year
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Theme toggle with persistence
+    const root = document.documentElement;
+    const btn = document.getElementById('themeToggle');
+    const saved = localStorage.getItem('theme'); // 'light' | 'dark' | 'auto'
+    if (saved) document.documentElement.setAttribute('data-theme', saved);
+
+    function updateIcon() {
+      const t = document.documentElement.getAttribute('data-theme') || 'auto';
+      btn.textContent = t === 'light' ? '🌞' : t === 'dark' ? '🌙' : '🌓';
+      btn.title = `Theme: ${t}`;
+    }
+    updateIcon();
+    btn.addEventListener('click', () => {
+      const current = document.documentElement.getAttribute('data-theme') || 'auto';
+      const next = current === 'auto' ? 'light' : current === 'light' ? 'dark' : 'auto';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+      updateIcon();
+    });
   </script>
 </body>
 </html>
