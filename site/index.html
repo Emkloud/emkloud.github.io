@@ -18,47 +18,46 @@
       <div class="navlinks">
         <a href="#projects">Projects</a>
         <a href="#skills">Skills</a>
+        <a href="#impact">Impact</a>
+        <a href="#experience">Experience</a>
         <a href="#contact">Contact</a>
         <a href="./assets/Emmanuel_Olaoye.pdf" target="_blank" rel="noopener">Resume</a>
-        <button id="themeToggle" class="btn ghost" aria-label="Toggle theme">🌙</button>
+        <button id="themeToggle" class="btn ghost" aria-label="Toggle theme">🌓</button>
       </div>
     </nav>
 
-    <!-- HERO -->
+    <!-- HERO (TEXT-ONLY) -->
     <header id="top" class="hero card">
-      <!-- Circular mask with adjustable zoom/focus (see CSS) -->
-      <div class="avatar-wrap" aria-hidden="true">
-        <img src="./assets/profile.png" alt="Emmanuel Olaoye">
-      </div>
-
       <div class="hero-copy">
         <h1>Emmanuel Olaoye</h1>
         <p class="lead">
           Senior Cloud/DevOps Engineer focused on <strong>AWS</strong>, <strong>Kubernetes (EKS)</strong>,
-          <strong>Terraform</strong>, and <strong>CI/CD</strong>. I design secure, scalable, cost-efficient
-          platforms, drive GitOps automation, and turn observability into rapid feedback for engineering teams.
+          <strong>Terraform</strong>, and <strong>CI/CD</strong>. I build secure, scalable, and cost-efficient
+          platforms, enable GitOps automation, and turn observability into rapid feedback for engineering teams.
         </p>
-
         <div class="actions">
           <a class="btn primary" href="./assets/Emmanuel_Olaoye.pdf" target="_blank" rel="noopener">Download Resume</a>
           <a class="btn" href="#projects">View Projects</a>
           <a class="btn" href="#skills">Explore Skills</a>
         </div>
-
         <div class="socials">
           <a class="link" href="https://github.com/Emkloud" target="_blank" rel="noopener" aria-label="GitHub">GitHub</a>
           <span class="dot">•</span>
           <a class="link" href="https://www.linkedin.com/in/" target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn</a>
           <span class="dot">•</span>
-          <a class="link" href="mailto:emma.oyesola@gmail.com?subject=Hello%20Emmanuel&body=Hi%20Emmanuel," aria-label="Email">Email</a>
+          <!-- Email: mailto + Gmail compose + copy -->
+          <a class="link" id="mailtoLink" href="mailto:emma.oyesola@gmail.com?subject=Hello%20Emmanuel&body=Hi%20Emmanuel," aria-label="Email">Email</a>
+          <span class="dot">•</span>
+          <a class="link" href="https://mail.google.com/mail/?view=cm&to=emma.oyesola@gmail.com&su=Hello%20Emmanuel" target="_blank" rel="noopener" aria-label="Compose in Gmail">Gmail</a>
+          <span class="dot">•</span>
+          <button id="copyEmail" class="link-like" type="button" aria-label="Copy email">Copy</button>
         </div>
       </div>
     </header>
 
-    <!-- TECH LOGO STRIP -->
+    <!-- LOGO STRIP -->
     <section aria-label="Technologies" class="logos section">
       <div class="logo-grid card">
-        <!-- Minimal inline SVGs (no external requests) -->
         <div class="logo">
           <svg viewBox="0 0 64 64" role="img" aria-label="AWS"><path d="M7 45c16 10 34 10 50 0" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/><text x="10" y="28" font-size="18" font-weight="700" fill="currentColor">AWS</text></svg>
         </div>
@@ -197,6 +196,70 @@
       </div>
     </section>
 
+    <!-- IMPACT / TESTIMONIALS -->
+    <section id="impact" class="section">
+      <h2>Impact</h2>
+      <div class="impact-grid">
+        <div class="impact card">
+          <p class="impact-metric">99.99%+</p>
+          <p class="impact-text">Availability across multi-region EKS with GitOps and autoscaling.</p>
+        </div>
+        <div class="impact card">
+          <p class="impact-metric">-40%</p>
+          <p class="impact-text">Ops toil reduction via Terraform modules & automated runbooks.</p>
+        </div>
+        <div class="impact card">
+          <p class="impact-metric">-35%</p>
+          <p class="impact-text">Infra cost savings using serverless/event-driven patterns.</p>
+        </div>
+        <div class="impact card">
+          <p class="impact-metric">-50% MTTR</p>
+          <p class="impact-text">Through pganalyze + unified logging/metrics and SLO-driven alerts.</p>
+        </div>
+      </div>
+
+      <div class="quotes grid">
+        <blockquote class="card">
+          <p>“Emmanuel elevated our platform reliability and deployment speed in weeks—not months.”</p>
+          <cite>— Engineering Manager</cite>
+        </blockquote>
+        <blockquote class="card">
+          <p>“His Terraform and GitHub Actions pipelines set the standard for our teams.”</p>
+          <cite>— Principal Architect</cite>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE TIMELINE + CERTS -->
+    <section id="experience" class="section">
+      <h2>Experience</h2>
+      <ol class="timeline">
+        <li class="card">
+          <div class="time">2022 — Present</div>
+          <div class="role">
+            <h3>Senior Cloud/DevOps Engineer</h3>
+            <p>Led AWS/EKS platform modernization, authored Terraform modules, and implemented GitOps + observability across environments.</p>
+          </div>
+        </li>
+        <li class="card">
+          <div class="time">2019 — 2022</div>
+          <div class="role">
+            <h3>DevOps Engineer</h3>
+            <p>Owned CI/CD, built serverless event pipelines, and improved incident response with SLOs and runbooks.</p>
+          </div>
+        </li>
+      </ol>
+
+      <div class="certs card">
+        <h3>Certifications</h3>
+        <ul>
+          <li>AWS Solutions Architect (or equivalent)</li>
+          <li>CKA/CKAD (or equivalent Kubernetes cert)</li>
+          <li>HashiCorp Terraform (knowledge/experience)</li>
+        </ul>
+      </div>
+    </section>
+
     <!-- CONTACT -->
     <section id="contact" class="section">
       <h2>Contact</h2>
@@ -204,6 +267,8 @@
         <p>Interested in platform reliability, EKS at scale, or automation initiatives? Let’s talk.</p>
         <div class="contact-actions">
           <a class="btn primary" href="mailto:emma.oyesola@gmail.com?subject=Hello%20Emmanuel&body=Hi%20Emmanuel," aria-label="Send email">Email</a>
+          <a class="btn" href="https://mail.google.com/mail/?view=cm&to=emma.oyesola@gmail.com&su=Hello%20Emmanuel" target="_blank" rel="noopener">Open in Gmail</a>
+          <button class="btn" type="button" id="copyEmail2">Copy Address</button>
           <a class="btn" href="https://github.com/Emkloud" target="_blank" rel="noopener">GitHub</a>
           <a class="btn" href="https://www.linkedin.com/in/" target="_blank" rel="noopener">LinkedIn</a>
         </div>
@@ -220,24 +285,39 @@
     document.getElementById('year').textContent = new Date().getFullYear();
 
     // Theme toggle with persistence
-    const root = document.documentElement;
     const btn = document.getElementById('themeToggle');
-    const saved = localStorage.getItem('theme'); // 'light' | 'dark' | 'auto'
+    const saved = localStorage.getItem('theme');
     if (saved) document.documentElement.setAttribute('data-theme', saved);
-
-    function updateIcon() {
+    function icon() {
       const t = document.documentElement.getAttribute('data-theme') || 'auto';
       btn.textContent = t === 'light' ? '🌞' : t === 'dark' ? '🌙' : '🌓';
       btn.title = `Theme: ${t}`;
     }
-    updateIcon();
+    icon();
     btn.addEventListener('click', () => {
       const current = document.documentElement.getAttribute('data-theme') || 'auto';
       const next = current === 'auto' ? 'light' : current === 'light' ? 'dark' : 'auto';
       document.documentElement.setAttribute('data-theme', next);
       localStorage.setItem('theme', next);
-      updateIcon();
+      icon();
     });
+
+    // Copy-to-clipboard helpers for email
+    const email = "emma.oyesola@gmail.com";
+    function copyEmail() {
+      navigator.clipboard.writeText(email).then(() => {
+        alert("Email address copied to clipboard.");
+      }).catch(() => {
+        // Fallback for older browsers
+        const el = document.createElement('textarea');
+        el.value = email; document.body.appendChild(el); el.select();
+        try { document.execCommand('copy'); alert("Email address copied to clipboard."); }
+        catch(e){ alert("Email: " + email); }
+        document.body.removeChild(el);
+      });
+    }
+    document.getElementById('copyEmail')?.addEventListener('click', copyEmail);
+    document.getElementById('copyEmail2')?.addEventListener('click', copyEmail);
   </script>
 </body>
 </html>
