@@ -8,6 +8,39 @@
     <meta name="description"
         content="Senior DevOps/SRE specializing in AWS, Kubernetes, Terraform, CI/CD and observability." />
     <link rel="stylesheet" href="./styles.css" />
+    <style>
+        /* light structure helpers so lists look great without touching your main CSS */
+        .grid {
+            display: grid;
+            gap: 16px;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        }
+
+        .pill {
+            display: inline-block;
+            padding: 4px 10px;
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            margin: 4px 6px 0 0;
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .subtle {
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        .block {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 16px;
+        }
+
+        .mt-6 {
+            margin-top: 24px;
+        }
+    </style>
 </head>
 
 <body>
@@ -18,7 +51,7 @@
             <nav>
                 <a href="#projects">Projects</a>
                 <a href="#skills">Skills</a>
-                <a href="./assets/Emmanuel_Olaoye.pdf">Resume</a>
+                <a href="./assets/Emmanuel_Olaoye.pdf" target="_blank" rel="noopener">Resume</a>
             </nav>
         </header>
 
@@ -43,10 +76,118 @@
             </div>
         </section>
 
-        <section id="skills">
+        <section id="skills" class="mt-6">
             <h2>Skills</h2>
-            <p>AWS · EKS · Terraform · Helm · ArgoCD · GitHub Actions · Datadog · Prometheus/Grafana · Python · Bash ·
-                Go · SOC2/ISO27001</p>
+
+            <!-- Core capabilities at a glance -->
+            <div class="block">
+                <strong>Core Capabilities:</strong>
+                <span class="pill">Platform Engineering</span>
+                <span class="pill">SRE & Reliability</span>
+                <span class="pill">Kubernetes on AWS (EKS)</span>
+                <span class="pill">Infrastructure as Code</span>
+                <span class="pill">Secure-by-Default Architecture</span>
+                <span class="pill">Observability & Incident Response</span>
+                <span class="pill">Cost Optimization</span>
+                <span class="pill">GitOps & Automation</span>
+            </div>
+
+            <!-- Categorized stacks -->
+            <div class="grid mt-6">
+
+                <div class="block">
+                    <h3>AWS (Primary Cloud)</h3>
+                    <p class="subtle">Breadth across networking, compute, storage, and security.</p>
+                    <ul>
+                        <li>VPC, Subnets, IGW/NAT, Route Tables, VPC Peering, PrivateLink</li>
+                        <li>EKS, ECS/Fargate, EC2, ASG, ALB/NLB, ECR</li>
+                        <li>RDS (Postgres/MySQL), DynamoDB, ElastiCache (Redis)</li>
+                        <li>S3, CloudFront, KMS, Parameter Store/Secrets Manager</li>
+                        <li>CloudWatch (Metrics/Logs/Alarms), EventBridge, SQS/SNS</li>
+                        <li>IAM (roles, policies, STS), Organizations, Control Tower</li>
+                    </ul>
+                </div>
+
+                <div class="block">
+                    <h3>Kubernetes & Containers</h3>
+                    <ul>
+                        <li>EKS lifecycle (cluster creation/upgrade), node groups, Fargate</li>
+                        <li>Helm, Kustomize, Argo CD (GitOps), Ingress (ALB/NGINX)</li>
+                        <li>Service Mesh (intro), HPA/VPA, PodDisruptionBudgets</li>
+                        <li>RBAC, NetworkPolicies (Calico/Cilium), secrets management</li>
+                        <li>Docker build/scan/sign, multi-arch images, distroless</li>
+                    </ul>
+                </div>
+
+                <div class="block">
+                    <h3>Infrastructure as Code</h3>
+                    <ul>
+                        <li>Terraform (modules, workspaces, remote state backends)</li>
+                        <li>CloudFormation, CDK (familiar); Helm for app infra</li>
+                        <li>Policy-as-code: Terraform Cloud/OPA (foundational)</li>
+                    </ul>
+                </div>
+
+                <div class="block">
+                    <h3>CI/CD & Release Engineering</h3>
+                    <ul>
+                        <li>GitHub Actions (matrix builds, environments, OIDC)</li>
+                        <li>Argo CD (progressive delivery), blue/green & canary patterns</li>
+                        <li>Artifact mgmt: JFrog Artifactory, S3 artifacts, SBOM & signing</li>
+                        <li>Quality gates: unit/integration, container scans, IaC checks</li>
+                    </ul>
+                </div>
+
+                <div class="block">
+                    <h3>Observability & Monitoring</h3>
+                    <ul>
+                        <li>Prometheus & Alertmanager, Grafana dashboards</li>
+                        <li>Datadog (APM, RUM, Logs, Synthetics)</li>
+                        <li>CloudWatch Metrics/Logs/Contributor Insights</li>
+                        <li>Tracing: OpenTelemetry (intro), X-Ray (basic)</li>
+                        <li>Runbooks, SLOs/SLIs, on-call & incident response</li>
+                    </ul>
+                </div>
+
+                <div class="block">
+                    <h3>Networking & Security</h3>
+                    <ul>
+                        <li>Zero-trust principles, least privilege IAM, AWS KMS</li>
+                        <li>WAF, Shield (L7/L3/4), Security Groups, NACLs, SG design</li>
+                        <li>mTLS/JWT at ingress, OAuth/OIDC federation</li>
+                        <li>Secrets (ASM/SSM), image/IaC scanning, supply-chain basics</li>
+                        <li>Compliance awareness: SOC 2 / ISO 27001 controls mapping</li>
+                    </ul>
+                </div>
+
+                <div class="block">
+                    <h3>Data & Messaging</h3>
+                    <ul>
+                        <li>RDS Postgres/MySQL operations, backups, pganalyze</li>
+                        <li>DynamoDB (keys, GSIs, capacity modes)</li>
+                        <li>SQS/SNS, EventBridge, step-functions (foundational)</li>
+                    </ul>
+                </div>
+
+                <div class="block">
+                    <h3>Languages & Scripting</h3>
+                    <ul>
+                        <li>Python (automation/CLI), Bash (Unix ops)</li>
+                        <li>Go (tooling & platform utilities)</li>
+                        <li>YAML/JSON/TOML for config, Makefiles</li>
+                    </ul>
+                </div>
+
+                <div class="block">
+                    <h3>Dev Productivity & AI</h3>
+                    <ul>
+                        <li>Git (PRs, trunk-based, conventional commits)</li>
+                        <li>AI copilots (Copilot/Claude/Cursor) with validation strategies</li>
+                        <li>Docs: ADRs, architecture diagrams, runbooks</li>
+                    </ul>
+                </div>
+
+            </div>
         </section>
 
         <footer>
