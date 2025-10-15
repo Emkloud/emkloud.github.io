@@ -30,7 +30,13 @@ if (toggle) {
   if (!p) return;
   document.querySelectorAll('.navlinks a').forEach(a=>{
     const href = a.getAttribute('href') || '';
-    if (href.endsWith(`${p}.html`) || (p==='index' && href === 'index.html')) a.classList.add('active');
+    const isActive = href.endsWith(`${p}.html`) || (p==='index' && href === 'index.html');
+    a.classList.toggle('active', isActive);
+    if (isActive) {
+      a.setAttribute('aria-current', 'page');
+    } else {
+      a.removeAttribute('aria-current');
+    }
   });
 })();
 
